@@ -15,3 +15,19 @@
     owner: "root"
     group: "root"
     mode: "0700"
+
+- name: Append clustercheck to services 
+  lineinfile:
+    dest: /etc/services
+    regexp: "^mysqlchk"
+    line: "mysqlchk        9200/tcp"
+    state: present
+  notify: restart xinetd
+
+- name: Add xinetd services
+  copy:
+    src: "etc/xinetd.d/mysqlchk"
+    dest: "/etc/xinetd.d/mysqlchk"
+    mode: "u=rw,g=r,o=r"
+  notify: restart xinetd
+

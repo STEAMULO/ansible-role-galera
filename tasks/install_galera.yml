@@ -21,6 +21,7 @@
   with_items:
     - percona-xtradb-cluster-56
     - python-mysqldb
+    - xinetd
   register: aptget
 
 - name: Stop mysql if apt changed
