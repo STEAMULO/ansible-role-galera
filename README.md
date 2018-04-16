@@ -29,7 +29,9 @@ Apache 2.0
 Author Information
 ------------------
 
-Patrick "CaptTofu" Galbraith <patg@patg.net>
+Steamulo - www.steamulo.com
+
+Forked from Patrick "CaptTofu" Galbraith <patg@patg.net>
 
 How do I use this?
 ------------------
